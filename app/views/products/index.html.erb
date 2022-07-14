@@ -1,1 +1,50 @@
-<p>products all</p>
+<div class="row">
+  <div class="col-9">
+    <h1 class="">All Products</h1>
+  </div>
+  <div class="col-3 text-end">
+    <button type="button" class="btn btn-success">Add New</button>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    DataTable Example
+  </div>
+  <div class="card-body">
+    <table id="datatablesSimple">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+
+      </tr>
+      </thead>
+      <tfoot>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+
+      </tr>
+      </tfoot>
+
+      <tbody>
+
+      <% @products.each do |product|%>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.price %></td>
+          <td><%= product.quantity %></td>
+        </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>
