@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-9">
+    <h1 class="">New Product</h1>
+  </div>
+</div>
+
+<%= form_with model: @product do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :price %><br>
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :quantity %><br>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
