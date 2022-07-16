@@ -17,33 +17,35 @@
       <thead>
       <tr>
         <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Age</th>
-
+        <th>Description</th>
+        <th>Price ($)</th>
+        <th>Quantity</th>
+        <th></th>
       </tr>
       </thead>
+
       <tfoot>
       <tr>
         <th>Name</th>
         <th>Position</th>
         <th>Office</th>
         <th>Age</th>
-
+        <th></th>
       </tr>
       </tfoot>
 
       <tbody>
-
-      <% @products.each do |product|%>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.description %></td>
-          <td><%= product.price %></td>
-          <td><%= product.quantity %></td>
-        </tr>
-      <% end %>
-
+        <% @products.each do |product|%>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= product.description %></td>
+            <td><%= product.price %></td>
+            <td><%= product.quantity %></td>
+            <td>
+              <%= link_to('View', product) %> | <%= link_to('Edit', edit_product_path(product)) %>
+            </td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
   </div>
