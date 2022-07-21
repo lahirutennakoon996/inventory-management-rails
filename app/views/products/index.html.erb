@@ -1,3 +1,8 @@
+<!-- Ensure data table loads properly -->
+<% content_for :head do %>
+  <meta name="turbo-visit-control" content="reload">
+<% end %>
+
 <div class="row">
   <div class="col-9">
     <h1 class="">All Products</h1>
@@ -8,10 +13,6 @@
 </div>
 
 <div class="card mb-4">
-  <div class="card-header">
-    <i class="fas fa-table me-1"></i>
-    DataTable Example
-  </div>
   <div class="card-body">
     <table id="datatablesSimple">
       <thead>
